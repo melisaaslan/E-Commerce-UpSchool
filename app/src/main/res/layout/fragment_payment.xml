@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_card_number"
+        android:layout_width="378dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/til_card_month"
+        app:layout_constraintEnd_toEndOf="@+id/til_name_surname"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/til_name_surname"
+        app:layout_constraintTop_toBottomOf="@+id/til_name_surname">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Card Number"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_name_surname"
+        android:layout_width="375dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginBottom="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/til_card_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_name_surname"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Card Holder"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_card_month"
+        android:layout_width="111dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/til_address"
+        app:layout_constraintEnd_toStartOf="@+id/til_cvc"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="@+id/til_card_number"
+        app:layout_constraintTop_toBottomOf="@+id/til_card_number">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_card_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Month"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_cvc"
+        android:layout_width="111dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/til_address"
+        app:layout_constraintEnd_toEndOf="@+id/til_card_number"
+        app:layout_constraintStart_toEndOf="@+id/til_card_year"
+        app:layout_constraintTop_toBottomOf="@+id/til_card_number"
+        app:layout_constraintVertical_bias="0.44">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_cvc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CVC"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_address"
+        android:layout_width="377dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="46dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_payment"
+        app:layout_constraintEnd_toEndOf="@+id/til_cvc"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/til_card_month"
+        app:layout_constraintTop_toBottomOf="@+id/til_card_month">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_address"
+            android:layout_width="match_parent"
+            android:layout_height="102dp"
+            android:hint="Address"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_payment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="@color/black"
+        android:text="Place Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_address" />
+
+    <ImageView
+        android:id="@+id/iv_payment"
+        android:layout_width="162dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/til_name_surname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/payment" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_card_year"
+        android:layout_width="111dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/til_address"
+        app:layout_constraintEnd_toStartOf="@+id/til_cvc"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toEndOf="@+id/til_card_month"
+        app:layout_constraintTop_toBottomOf="@+id/til_card_number"
+        app:layout_constraintVertical_bias="0.523">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_card_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Year"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/ic_backToCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
